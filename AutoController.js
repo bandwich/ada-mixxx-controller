@@ -1,3 +1,5 @@
+// https://github.com/mixxxdj/mixxx/wiki/Midi-Scripting
+
 function doNothing() {}
 var AutoController = {};
 
@@ -6,8 +8,6 @@ var AutoController = {};
 
 AutoController.init = doNothing;
 AutoController.shutdown = doNothing;
-
-AutoController.position = 0;
 
 AutoController.timers = {
     gain: -1,
@@ -46,9 +46,15 @@ const _nudge = function(direction, size, group) {
 }
 
 // deck-dependent groups have a deck suffix
-const _formatGroup = function(group) {
+const _stripGroup = function(group) {
     return group.substring(0, group.length - 1);
 }
+
+// deck-dependent groups have a deck suffix
+const _affixGroup = function(group, suffix) {
+    return group.concat(suffix);
+}
+
 
 const _checkTimer = function(engine, group) {
     // this if check may be unnecessary
@@ -104,14 +110,14 @@ AutoController.cancelNudge = function(channel, control, value, status, group) {
 AutoController.nudgeMaster = function(channel, size, direction, status, group) {
     _checkTimer(engine, group);
     const control =  _nudge(direction, size, group);
-    const id = engine.beginTimer(200, function () {
+    const timerId = engine.beginTimer(200, function () {
 
         // Don't see it documented by Mixxx, but triggerControl runs a one-shot timer under the hood
         // triggerControl takes in a delay as its last param, in ms
         // 20ms is the fastest resolution
         script.triggerControl(_master, control, 20);
     }, false);
-    AutoController.timers[group] = id;
+    AutoController.timers[group] = timerId;
 }
 
 AutoController.nudge = function(channel, deck, val, status, group) {
@@ -119,22 +125,22 @@ AutoController.nudge = function(channel, deck, val, status, group) {
 
     // deck-dependent nudges encode both direction and size within val
     // even: nudge down, odd: nudge up ... 0-1: 1% adjust, 2-3: 4% adjust
-    const control = _nudge(val % 2, Math.floor(val / 2), _formatGroup(group));
-    const id = engine.beginTimer(200, function () {
+    const control = _nudge(val % 2, Math.floor(val / 2), _stripGroup(group));
+    const timerId = engine.beginTimer(200, function () {
         script.triggerControl(_channel(deck), control, 20);
     }, false);
-    AutoController.timers[group] = id;
+    AutoController.timers[group] = timerId;
 }
 
 // A generalized nudge function with pattern matching would help
 AutoController.nudgeEQ = function(channel, deck, val, status, group) {
     _checkTimer(engine, group);
    
-    const control = _nudge(val % 2, Math.floor(val / 2), _formatGroup(group));
-    const id = engine.beginTimer(200, function () {
+    const control = _nudge(val % 2, Math.floor(val / 2), _stripGroup(group));
+    const timerId = engine.beginTimer(200, function () {
         script.triggerControl(_eq(deck), control, 20);
     }, false);
-    AutoController.timers[group] = id;
+    AutoController.timers[group] = timerId;
 }
 
 AutoController.set = function(channel, deck, value, status, group) {
@@ -144,4 +150,13 @@ AutoController.set = function(channel, deck, value, status, group) {
 AutoController.activateHotcue = function(channel, deck, number) {
     engine.setValue(_channel(deck), _hotcue(number), 1);
 }
-// var playAConnection = engine.makeConnection('[Channel1]', 'play', testCallback);
+
+// var setCallback = function (value, control, group) {
+//     midi.sendShortMsg(0x91, 0x11, 0x00);
+// }
+
+
+// var nudgeCallback = function (value, control, group) {
+//     // this keyword refers to AutoController
+//     midi.sendShortMsg(0, this.timers[group], value);
+// }
