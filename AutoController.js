@@ -1,13 +1,15 @@
 // https://github.com/mixxxdj/mixxx/wiki/Midi-Scripting
-
 function doNothing() {}
+
 var AutoController = {};
 
 // status byte (opcode + channel), controller number, controller value
 // XML file matches on status and controller number - bytes 1 and 2
 
-AutoController.init = doNothing;
+AutoController.init = init;
 AutoController.shutdown = doNothing;
+
+AutoController.scrollPosition = 0;
 
 AutoController.timers = {
     gain: -1,
@@ -25,8 +27,14 @@ AutoController.timers = {
 
 const _master = "[Master]";
 const _library = "[Library]";
+const sortByPosition = 23;
 const _channel = function(number) {
     return "[Channel" + (number + 1).toString() + "]";
+}
+
+function init() {
+    engine.setValue(_library, 'sort_column', sortByPosition); // sort by position
+    engine.setValue(_library, 'sort_order', 0); // sort ascending
 }
 
 const _eq = function(number) {
@@ -64,38 +72,50 @@ const _checkTimer = function(engine, group) {
     }
 }
 
-const navigateToPlaylists = function() {
+const _navigateToPlaylist = function(id) {
+    // from Mixxx launch
     engine.setValue(_library, "MoveDown", 1);
     engine.setValue(_library, 'MoveDown', 1);
-}
-
-const goToItem = function() {
     engine.setValue(_library, 'GoToItem', 1);
+    _selectPlaylist(id);
 }
 
-const focusNode = function() {
-    engine.setValue(_library, 'MoveFocusForward', 1);
-}
-
-const selectPlaylist = function(playlistId) {
-    for (var i=0; i<playlistId; i++) {
+const _selectPlaylist = function(id) {
+    for (var i=0; i<id; i++) {
         engine.setValue(_library, 'MoveDown', 1);
     }
     // seems 1000ms is enough of a threshold for actions to update first
-    engine.beginTimer(1000, focusNode, true);   
+    engine.beginTimer(1000, init, true);
+    engine.beginTimer(1300, _focusNode, true);
 }
 
-// value: playlistId
-AutoController.selectPlaylist = function(channel, control, value) {
-    navigateToPlaylists();
-    goToItem();
-    selectPlaylist(value);
+const _focusNode = function() {
+    engine.setValue(_library, 'MoveFocusForward', 1);
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+AutoController.selectPlaylist = function(channel, control, id) {
+    _navigateToPlaylist(id);
 }
 
 AutoController.selectTrack = function(channel, deck, value, status, group) {
-    // replace this with generalized function for finding a track position
-    engine.setParameter(_library, 'MoveVertical', value - 1);
+    // expression for track position against current position
+    const diff = value - AutoController.scrollPosition - 1;
+    AutoController.scrollPosition = diff;
     
+    engine.setParameter(_library, 'MoveVertical', diff);
     engine.setValue(_channel(deck), group, 1);
 }
 
@@ -151,12 +171,16 @@ AutoController.activateHotcue = function(channel, deck, number) {
     engine.setValue(_channel(deck), _hotcue(number), 1);
 }
 
-// var setCallback = function (value, control, group) {
-//     midi.sendShortMsg(0x91, 0x11, 0x00);
-// }
-
-
-// var nudgeCallback = function (value, control, group) {
-//     // this keyword refers to AutoController
-//     midi.sendShortMsg(0, this.timers[group], value);
-// }
+// reports requested single value back on the same channel
+AutoController.ask = function(channel, deck, value, status, group) {
+    const split = function(val) {
+        const first = Math.floor(val / 2);
+        const second = val - first;
+        return [first, second];
+    }
+    // so...we have 7 bits to encode values. That's not enough, so represent it as sum of 2 data bytes
+    const vals = split(engine.getValue(_channel(deck), group));
+    
+    // value needs to be encoded as byte 3 otherwise you create an infinite MIDI loop
+    midi.sendShortMsg(status, vals[0], vals[1]);
+}

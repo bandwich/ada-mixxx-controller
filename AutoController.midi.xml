@@ -249,6 +249,20 @@
                 <options><Script-Binding/></options>
             </control>
             <control>
+                <group>playposition</group>
+                <key>AutoController.set</key>
+                <status>0x9c</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>playposition</group>
+                <key>AutoController.set</key>
+                <status>0x9c</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
                 <group>gain</group>
                 <key>AutoController.nudgeMaster</key>
                 <status>0xb0</status>
@@ -325,13 +339,78 @@
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
-             <control>
+            <control>
                 <group>bpmB</group>
                 <key>AutoController.nudge</key>
                 <status>0xb5</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
+
+            <control>
+                <group>gain</group>
+                <key>AutoController.ask</key>
+                <status>0xa0</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>position</group>
+                <key>AutoController.ask</key>
+                <status>0xa2</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>position</group>
+                <key>AutoController.ask</key>
+                <status>0xa2</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+             <control>
+                <group>volume</group>
+                <key>AutoController.ask</key>
+                <status>0xa3</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>volume</group>
+                <key>AutoController.ask</key>
+                <status>0xa3</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+             <control>
+                <group>bpm</group>
+                <key>AutoController.ask</key>
+                <status>0xa4</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>bpm</group>
+                <key>AutoController.ask</key>
+                <status>0xa4</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+             <control>
+                <group>duration</group>
+                <key>AutoController.ask</key>
+                <status>0xa5</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>duration</group>
+                <key>AutoController.ask</key>
+                <status>0xa5</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+
         </controls>
         <outputs></outputs>
     </controller>
