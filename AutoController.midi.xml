@@ -263,149 +263,149 @@
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>gain</group>
-                <key>AutoController.nudgeMaster</key>
-                <status>0xb0</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>gain</group>
-                <key>AutoController.nudgeMaster</key>
-                <status>0xb0</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
                 <group>volumeA</group>
                 <key>AutoController.nudge</key>
-                <status>0xb1</status>
+                <status>0x86</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>volumeB</group>
                 <key>AutoController.nudge</key>
-                <status>0xb1</status>
+                <status>0x86</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter3A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb2</status>
+                <status>0x87</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter3B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb2</status>
+                <status>0x87</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb3</status>
+                <status>0x88</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb3</status>
+                <status>0x88</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb4</status>
+                <status>0x89</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0xb4</status>
+                <status>0x89</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpmA</group>
                 <key>AutoController.nudge</key>
-                <status>0xb5</status>
+                <status>0x8a</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpmB</group>
                 <key>AutoController.nudge</key>
-                <status>0xb5</status>
+                <status>0x8a</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>gain</group>
+                <key>AutoController.nudgeMaster</key>
+                <status>0x8b</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>gain</group>
+                <key>AutoController.nudgeMaster</key>
+                <status>0x8b</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
 
             <control>
                 <group>gain</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa0</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>position</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa2</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>position</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa2</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>volume</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa3</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>volume</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa3</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>bpm</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa4</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpm</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askSingle</key>
                 <status>0xa4</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>duration</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askTime</key>
                 <status>0xa5</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>duration</group>
-                <key>AutoController.ask</key>
+                <key>AutoController.askTime</key>
                 <status>0xa5</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>

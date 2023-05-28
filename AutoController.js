@@ -25,6 +25,8 @@ AutoController.timers = {
     bpmB: -1
 }
 
+const valueStatusByte = 0xb0;
+const timeStatusByte = 0xb1;
 const _master = "[Master]";
 const _library = "[Library]";
 const sortByPosition = 23;
@@ -172,15 +174,27 @@ AutoController.activateHotcue = function(channel, deck, number) {
 }
 
 // reports requested single value back on the same channel
-AutoController.ask = function(channel, deck, value, status, group) {
+AutoController.askSingle = function(channel, deck, value, status, group) {
+
+    // so...we have 7 bits to encode values. That's not enough, so represent it as sum of 2 data bytes
     const split = function(val) {
         const first = Math.floor(val / 2);
         const second = val - first;
         return [first, second];
     }
-    // so...we have 7 bits to encode values. That's not enough, so represent it as sum of 2 data bytes
     const vals = split(engine.getValue(_channel(deck), group));
-    
-    // value needs to be encoded as byte 3 otherwise you create an infinite MIDI loop
-    midi.sendShortMsg(status, vals[0], vals[1]);
+    midi.sendShortMsg(valueStatusByte, vals[0], vals[1]);
+}
+
+// reports requested time value back on the same channel
+AutoController.askTime = function(channel, deck, value, status, group) {
+
+    // Represent time not as seconds but as [minutes, seconds]
+    const split = function(val) {
+        const minutes = Math.floor(val / 60);
+        const seconds = val % 60;
+        return [minutes, seconds];
+    }
+    const vals = split(engine.getValue(_channel(deck), group));
+    midi.sendShortMsg(timeStatusByte, vals[0], vals[1]);
 }
