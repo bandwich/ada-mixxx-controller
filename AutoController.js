@@ -9,8 +9,6 @@ var AutoController = {};
 AutoController.init = init;
 AutoController.shutdown = doNothing;
 
-AutoController.scrollPosition = 0;
-
 AutoController.timers = {
     gain: -1,
     volumeA: -1,
@@ -25,8 +23,9 @@ AutoController.timers = {
     bpmB: -1
 }
 
-const valueStatusByte = 0xb0;
-const timeStatusByte = 0xb1;
+var scrollPosition = 1;
+const valueStatusByte = 0x80;
+const timeStatusByte = 0x81;
 const _master = "[Master]";
 const _library = "[Library]";
 const sortByPosition = 23;
@@ -114,10 +113,10 @@ AutoController.selectPlaylist = function(channel, control, id) {
 
 AutoController.selectTrack = function(channel, deck, value, status, group) {
     // expression for track position against current position
-    const diff = value - AutoController.scrollPosition - 1;
-    AutoController.scrollPosition = diff;
+    const diff = value - scrollPosition;
+    scrollPosition = value;
     
-    engine.setParameter(_library, 'MoveVertical', diff);
+    engine.setValue(_library, 'MoveVertical', diff);
     engine.setValue(_channel(deck), group, 1);
 }
 

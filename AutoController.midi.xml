@@ -13,336 +13,337 @@
             <control>
                 <group>gain</group>
                 <key>AutoController.cancelNudge</key>
-                <status>0x80</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>volumeA</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x81</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>volumeB</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x81</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter3A</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x82</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter3B</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x82</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter2A</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x83</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter2B</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x83</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter1A</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x84</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>parameter1B</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x84</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-             <control>
-                <group>bpmA</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x85</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>bpmB</group>
-                <key>AutoController.cancelNudge</key>
-                <status>0x85</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>selectPlaylist</group>
-                <key>AutoController.selectPlaylist</key>
                 <status>0x90</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>LoadSelectedTrack</group>
-                <key>AutoController.selectTrack</key>
+                <group>volumeA</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x91</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>LoadSelectedTrack</group>
-                <key>AutoController.selectTrack</key>
+                <group>volumeB</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x91</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_size</group>
-                <key>AutoController.set</key>
+                <group>parameter3A</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x92</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_size</group>
-                <key>AutoController.set</key>
+                <group>parameter3B</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x92</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_forward</group>
-                <key>AutoController.set</key>
+                <group>parameter2A</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x93</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_forward</group>
-                <key>AutoController.set</key>
+                <group>parameter2B</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x93</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_backward</group>
-                <key>AutoController.set</key>
+                <group>parameter1A</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x94</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>beatjump_backward</group>
-                <key>AutoController.set</key>
+                <group>parameter1B</group>
+                <key>AutoController.cancelNudge</key>
                 <status>0x94</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>bpm</group>
-                <key>AutoController.set</key>
-                <status>0x95</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>bpm</group>
-                <key>AutoController.set</key>
-                <status>0x95</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>beatloop_size</group>
-                <key>AutoController.set</key>
-                <status>0x96</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>beatloop_size</group>
-                <key>AutoController.set</key>
-                <status>0x96</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>beatloop_activate</group>
-                <key>AutoController.set</key>
-                <status>0x97</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>beatloop_activate</group>
-                <key>AutoController.set</key>
-                <status>0x97</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>sync_enabled</group>
-                <key>AutoController.set</key>
-                <status>0x98</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>sync_enabled</group>
-                <key>AutoController.set</key>
-                <status>0x98</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>play</group>
-                <key>AutoController.set</key>
-                <status>0x99</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>play</group>
-                <key>AutoController.set</key>
-                <status>0x99</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>mute</group>
-                <key>AutoController.set</key>
-                <status>0x9a</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>mute</group>
-                <key>AutoController.set</key>
-                <status>0x9a</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
-                <group>activateHotcue</group>
-                <key>AutoController.activateHotcue</key>
-                <status>0x9b</status>
+                <group>bpmA</group>
+                <key>AutoController.cancelNudge</key>
+                <status>0x95</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
-                <group>activateHotcue</group>
-                <key>AutoController.activateHotcue</key>
-                <status>0x9b</status>
-                <midino>0x01</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>playposition</group>
-                <key>AutoController.set</key>
-                <status>0x9c</status>
-                <midino>0x00</midino>
-                <options><Script-Binding/></options>
-            </control>
-            <control>
-                <group>playposition</group>
-                <key>AutoController.set</key>
-                <status>0x9c</status>
+                <group>bpmB</group>
+                <key>AutoController.cancelNudge</key>
+                <status>0x95</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>volumeA</group>
                 <key>AutoController.nudge</key>
-                <status>0x86</status>
+                <status>0x96</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>volumeB</group>
                 <key>AutoController.nudge</key>
-                <status>0x86</status>
+                <status>0x96</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter3A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x87</status>
+                <status>0x97</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter3B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x87</status>
+                <status>0x97</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x88</status>
+                <status>0x98</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x88</status>
+                <status>0x98</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1A</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x89</status>
+                <status>0x99</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1B</group>
                 <key>AutoController.nudgeEQ</key>
-                <status>0x89</status>
+                <status>0x99</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpmA</group>
                 <key>AutoController.nudge</key>
-                <status>0x8a</status>
+                <status>0x9a</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpmB</group>
                 <key>AutoController.nudge</key>
-                <status>0x8a</status>
+                <status>0x9a</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>gain</group>
                 <key>AutoController.nudgeMaster</key>
-                <status>0x8b</status>
+                <status>0x9b</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>gain</group>
                 <key>AutoController.nudgeMaster</key>
-                <status>0x8b</status>
+                <status>0x9b</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+
+            <control>
+                <group>selectPlaylist</group>
+                <key>AutoController.selectPlaylist</key>
+                <status>0xa0</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>LoadSelectedTrack</group>
+                <key>AutoController.selectTrack</key>
+                <status>0xa1</status>
+                <midino>0x00</midino>   
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>LoadSelectedTrack</group>
+                <key>AutoController.selectTrack</key>
+                <status>0xa1</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_size</group>
+                <key>AutoController.set</key>
+                <status>0xa2</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_size</group>
+                <key>AutoController.set</key>
+                <status>0xa2</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_forward</group>
+                <key>AutoController.set</key>
+                <status>0xa3</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_forward</group>
+                <key>AutoController.set</key>
+                <status>0xa3</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_backward</group>
+                <key>AutoController.set</key>
+                <status>0xa4</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatjump_backward</group>
+                <key>AutoController.set</key>
+                <status>0xa4</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>bpm</group>
+                <key>AutoController.set</key>
+                <status>0xa5</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>bpm</group>
+                <key>AutoController.set</key>
+                <status>0xa5</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatloop_size</group>
+                <key>AutoController.set</key>
+                <status>0xa6</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatloop_size</group>
+                <key>AutoController.set</key>
+                <status>0xa6</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatloop_activate</group>
+                <key>AutoController.set</key>
+                <status>0xa7</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>beatloop_activate</group>
+                <key>AutoController.set</key>
+                <status>0xa7</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>sync_enabled</group>
+                <key>AutoController.set</key>
+                <status>0xa8</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>sync_enabled</group>
+                <key>AutoController.set</key>
+                <status>0xa8</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>play</group>
+                <key>AutoController.set</key>
+                <status>0xa9</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>play</group>
+                <key>AutoController.set</key>
+                <status>0xa9</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>mute</group>
+                <key>AutoController.set</key>
+                <status>0xaa</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>mute</group>
+                <key>AutoController.set</key>
+                <status>0xaa</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+             <control>
+                <group>activateHotcue</group>
+                <key>AutoController.activateHotcue</key>
+                <status>0xab</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>activateHotcue</group>
+                <key>AutoController.activateHotcue</key>
+                <status>0xab</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>playposition</group>
+                <key>AutoController.set</key>
+                <status>0xac</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>playposition</group>
+                <key>AutoController.set</key>
+                <status>0xac</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
@@ -350,63 +351,63 @@
             <control>
                 <group>gain</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa0</status>
+                <status>0xb0</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>position</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa2</status>
+                <status>0xb2</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>position</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa2</status>
+                <status>0xb2</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>volume</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa3</status>
+                <status>0xb3</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>volume</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa3</status>
+                <status>0xb3</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>bpm</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa4</status>
+                <status>0xb4</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>bpm</group>
                 <key>AutoController.askSingle</key>
-                <status>0xa4</status>
+                <status>0xb4</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
              <control>
                 <group>duration</group>
                 <key>AutoController.askTime</key>
-                <status>0xa5</status>
+                <status>0xb5</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>duration</group>
                 <key>AutoController.askTime</key>
-                <status>0xa5</status>
+                <status>0xb5</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
