@@ -24,8 +24,8 @@ AutoController.timers = {
 }
 
 var scrollPosition = 1;
-const valueStatusByte = 0x80;
-const timeStatusByte = 0x81;
+const valueAnswerStatus = 0x80;
+const timeAnswerStatus = 0x81;
 const _master = "[Master]";
 const _library = "[Library]";
 const sortByPosition = 23;
@@ -95,16 +95,7 @@ const _focusNode = function() {
 }
 
 
-
-
-
-
 /* ------------------------------------------------------------------------------ */
-
-
-
-
-
 
 
 AutoController.selectPlaylist = function(channel, control, id) {
@@ -182,7 +173,7 @@ AutoController.askSingle = function(channel, deck, value, status, group) {
         return [first, second];
     }
     const vals = split(engine.getValue(_channel(deck), group));
-    midi.sendShortMsg(valueStatusByte, vals[0], vals[1]);
+    midi.sendShortMsg(valueAnswerStatus, vals[0], vals[1]);
 }
 
 // reports requested time value back on the same channel
@@ -195,5 +186,5 @@ AutoController.askTime = function(channel, deck, value, status, group) {
         return [minutes, seconds];
     }
     const vals = split(engine.getValue(_channel(deck), group));
-    midi.sendShortMsg(timeStatusByte, vals[0], vals[1]);
+    midi.sendShortMsg(timeAnswerStatus, vals[0], vals[1]);
 }
