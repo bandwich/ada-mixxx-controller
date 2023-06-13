@@ -103,42 +103,42 @@
             </control>
             <control>
                 <group>parameter3A</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x97</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter3B</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x97</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2A</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x98</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter2B</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x98</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1A</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x99</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>parameter1B</group>
-                <key>AutoController.nudgeEQ</key>
+                <key>AutoController.nudge</key>
                 <status>0x99</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
@@ -159,14 +159,14 @@
             </control>
             <control>
                 <group>gain</group>
-                <key>AutoController.nudgeMaster</key>
+                <key>AutoController.nudge</key>
                 <status>0x9b</status>
                 <midino>0x00</midino>
                 <options><Script-Binding/></options>
             </control>
             <control>
                 <group>gain</group>
-                <key>AutoController.nudgeMaster</key>
+                <key>AutoController.nudge</key>
                 <status>0x9b</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
@@ -344,6 +344,20 @@
                 <group>playposition</group>
                 <key>AutoController.set</key>
                 <status>0xac</status>
+                <midino>0x01</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>volume</group>
+                <key>AutoController.set</key>
+                <status>0xad</status>
+                <midino>0x00</midino>
+                <options><Script-Binding/></options>
+            </control>
+            <control>
+                <group>volume</group>
+                <key>AutoController.set</key>
+                <status>0xad</status>
                 <midino>0x01</midino>
                 <options><Script-Binding/></options>
             </control>
